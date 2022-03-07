@@ -14,10 +14,9 @@
   </head>
 
   <body>
-    <!-- let navbar stretch across whole page -->
     <%= render partial: "shared/navbar" %>
-    <!-- wrap all content from views in container -->
     <div class="container">
+      <%= render partial: "shared/flash" %> 
       <%= yield %>
     </div>
   </body>
