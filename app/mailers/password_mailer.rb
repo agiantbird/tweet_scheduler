@@ -6,7 +6,7 @@ class PasswordMailer < ApplicationMailer
   #   en.password_mailer.reset.subject
   #
   def reset
-    @token = params[:user].to_sgid(purpose: "password_reset", expires_in: 15.minutes)
+    @token = params[:user].signed_id(purpose: "password_reset", expires_in: 15.minutes)
     # user.to_sgid 
     # user.to_sgid(expires_in: 15.minutes)
     # user.to_sgid(expires_in: 15.minutes, purpose: "password_reset")
