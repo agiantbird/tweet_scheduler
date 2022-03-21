@@ -22,6 +22,14 @@ Rails.application.routes.draw do
 
 
   delete "logout", to: "sessions#destroy"
+
+  # resources gives you all the CRUD actions (index show edit update delete)
+  # will give you:
+  ## get "twitter_accounts/:id"
+  ## delete "twitter_accounts/:id"
+  # will also set the 'to:' to the twitter_accounts controller automatically
+  resources :twitter_accounts
+
   #root
   root to: "main#index"
 
