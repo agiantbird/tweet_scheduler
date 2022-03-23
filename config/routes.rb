@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   ## delete "twitter_accounts/:id"
   # will also set the 'to:' to the twitter_accounts controller automatically
   resources :twitter_accounts
+  resources :tweets
 
   #root
   root to: "main#index"
